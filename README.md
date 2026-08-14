@@ -79,22 +79,32 @@ flowchart LR
 
 | # | System | Demonstrates | Status | Evidence |
 | --- | --- | --- | --- | --- |
-| 1 | [production-rag](https://github.com/pabloalvarez99/production-rag) | Hybrid RAG with RRF, optional rerank, grounded generation (citations + refusal), free-path evals and UI | **LIVE v0.1.0** | [release](https://github.com/pabloalvarez99/production-rag/releases/tag/v0.1.0) at `678c554` · green `main` `129a46d` · [CI](https://github.com/pabloalvarez99/production-rag/actions/workflows/ci.yml) · [case study](https://github.com/pabloalvarez99/production-rag/blob/main/docs/CASESTUDY.md) · [SHIP](https://github.com/pabloalvarez99/production-rag/blob/main/docs/SHIP.md) |
+| 1 | [production-rag](https://github.com/pabloalvarez99/production-rag) | Hybrid RAG with RRF, optional rerank, grounded generation (citations + refusal), free-path evals and UI | **LIVE v0.1.0** | [release](https://github.com/pabloalvarez99/production-rag/releases/tag/v0.1.0) at `678c554` · green `main` `62cc15f` (metadata filters, [ADR 0011](https://github.com/pabloalvarez99/production-rag/blob/main/docs/adr/0011-metadata-filters.md)) · [CI](https://github.com/pabloalvarez99/production-rag/actions/workflows/ci.yml) · [case study](https://github.com/pabloalvarez99/production-rag/blob/main/docs/CASESTUDY.md) · [SHIP](https://github.com/pabloalvarez99/production-rag/blob/main/docs/SHIP.md) |
 | 2 | [agentic-rag-research](https://github.com/pabloalvarez99/agentic-rag-research) | Research agent with tool-based retrieval, step budgets, stop reasons, notes, and full traces | **LIVE v0.1.0** | [release](https://github.com/pabloalvarez99/agentic-rag-research/releases/tag/v0.1.0) at `18c1ff9` · green `main` `57ce423` · [CI](https://github.com/pabloalvarez99/agentic-rag-research/actions/workflows/ci.yml) · [SHIP](https://github.com/pabloalvarez99/agentic-rag-research/blob/main/docs/SHIP.md) |
 | 3 | [multi-agent-orchestration](https://github.com/pabloalvarez99/multi-agent-orchestration) | Explicit roles, handoff budgets, degradation modes, and auditable traces | **LIVE v0.1.0** | [release](https://github.com/pabloalvarez99/multi-agent-orchestration/releases/tag/v0.1.0) at `e2687ca` · green `main` `78b3910` · [CI](https://github.com/pabloalvarez99/multi-agent-orchestration/actions/workflows/ci.yml) · [SHIP](https://github.com/pabloalvarez99/multi-agent-orchestration/blob/main/docs/SHIP.md) |
-| 4 | [repomind](https://github.com/pabloalvarez99/repomind) | Repository Q&A with AST-aware chunking and grounded `path:line` citations | **LIVE v0.1.0** | [release](https://github.com/pabloalvarez99/repomind/releases/tag/v0.1.0) at `327a949` · green `main` `a9b0acb` · [CI](https://github.com/pabloalvarez99/repomind/actions/workflows/ci.yml) · [SHIP](https://github.com/pabloalvarez99/repomind/blob/main/docs/SHIP.md) |
-| 5 | [ai-platform](https://github.com/pabloalvarez99/ai-platform) | Gateway edge for the portfolio: API-key auth, per-key rate limiting, health aggregation, and Compose delivery | **LIVE v0.1.0** | [release](https://github.com/pabloalvarez99/ai-platform/releases/tag/v0.1.0) at `7978a00` · green `main` `4318531` · [CI](https://github.com/pabloalvarez99/ai-platform/actions/workflows/ci.yml) · [SHIP](https://github.com/pabloalvarez99/ai-platform/blob/main/docs/SHIP.md) |
+| 4 | [repomind](https://github.com/pabloalvarez99/repomind) | Repository Q&A with AST-aware chunking and grounded `path:line` citations | **LIVE v0.1.0** | [release](https://github.com/pabloalvarez99/repomind/releases/tag/v0.1.0) at `327a949` · green `main` `1db33ab` · [CI](https://github.com/pabloalvarez99/repomind/actions/workflows/ci.yml) · [SHIP](https://github.com/pabloalvarez99/repomind/blob/main/docs/SHIP.md) |
+| 5 | [ai-platform](https://github.com/pabloalvarez99/ai-platform) | Gateway edge for the portfolio: API-key auth, per-key rate limiting, health aggregation, and Compose delivery | **LIVE v0.1.0** | [release](https://github.com/pabloalvarez99/ai-platform/releases/tag/v0.1.0) at `7978a00` · **[hosted gateway](https://pax-ai-gateway.vercel.app)** from `main` `2fd74c7` · that `main` is lint-red on the two Vercel entrypoint shims, last all-green `main` `4318531` · [CI](https://github.com/pabloalvarez99/ai-platform/actions/workflows/ci.yml) · [SHIP](https://github.com/pabloalvarez99/ai-platform/blob/main/docs/SHIP.md) |
 
 **Footnotes, because a scorecard is a contract.** P3 goldens measure **routing contracts** on deterministic fake specialists, not “agents beat a single model.” RepoMind goldens measure **citation plumbing** on a fixture, not SOTA over arbitrary repos. Free-path scorecards are billed **USD 0**.
 
 **P5 does not host the other four.** Its free path is the gateway alone: upstream URLs are empty in CI and in the documented demo, so P1–P4 answer `upstream_unconfigured` instead of running for a visitor. The rate limiter is an in-process fixed window on a single instance — not a distributed limiter — and `dev-local` is a public fixture key committed to the repo, not a credential. No hosted multi-service deployment and no TLS termination are claimed.
 
+**Try hosted:** [pax-ai-gateway.vercel.app](https://pax-ai-gateway.vercel.app) — the gateway itself, running, no clone. `GET /health` is open; `GET /v1/platform/status` returns `401` without a key and answers when you pass the public fixture header `X-API-Key: dev-local`:
+
+```bash
+curl https://pax-ai-gateway.vercel.app/health
+curl -H "X-API-Key: dev-local" https://pax-ai-gateway.vercel.app/v1/platform/status
+```
+
+Verified 2026-08-14: `200`, then `401`, then `gateway: up` with `rag`, `research`, `mao`, and `repomind` reporting `unconfigured` — which is the point. One hosted gateway, not five hosted systems.
+
 Site map of the same ladder: **[paxdev.vercel.app](https://paxdev.vercel.app)**.
 
 ### See it without cloning
 
-Each system commits its own UI captures. These are the official ones, pinned to the green `main`
-above — no hosted demo, no mockup, no screenshot I cannot reproduce with a documented command.
+Each system commits its own UI captures. These are the official ones, pinned to the commit that
+produced them — no mockup, no screenshot I cannot reproduce with a documented command. P5 is the
+only system you can also hit over HTTP; the other four still run locally.
 
 | System | Capture | What it proves |
 | --- | --- | --- |
