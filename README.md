@@ -21,6 +21,7 @@
   <a href="https://paxdev.vercel.app"><img src="https://img.shields.io/badge/Portfolio-paxdev.vercel.app-65f6d1?style=for-the-badge&labelColor=07110f" alt="Portfolio" /></a>
   <a href="https://github.com/pabloalvarez99/production-rag/releases/tag/v0.1.0"><img src="https://img.shields.io/badge/Flagship-production--rag%20v0.1.0-0ea5e9?style=for-the-badge&labelColor=07110f" alt="Flagship release" /></a>
   <a href="https://github.com/pabloalvarez99/agentic-rag-research/releases/tag/v0.1.0"><img src="https://img.shields.io/badge/Agents-research%20v0.1.0-a78bfa?style=for-the-badge&labelColor=07110f" alt="Agent release" /></a>
+  <a href="https://github.com/pabloalvarez99?tab=repositories"><img src="https://img.shields.io/badge/Ladder-5%20systems%20LIVE%20v0.1.0-65f6d1?style=for-the-badge&labelColor=07110f" alt="Five systems live at v0.1.0" /></a>
 </p>
 
 <p align="center">
@@ -58,8 +59,8 @@ A hiring manager can verify, in a browser, that I do not ship prompt demos:
 
 ## The AI systems ladder
 
-Five public systems are **LIVE** on documented free paths. Only P1 and P2 claim tagged
-releases; P3–P5 remain explicit about their unreleased milestone boundaries.
+All five public systems are **LIVE at a tagged `v0.1.0`**, each on a `main` whose latest
+CI run is green, each with a documented free path. Verified against GitHub on 2026-08-14.
 
 ```mermaid
 flowchart LR
@@ -78,13 +79,15 @@ flowchart LR
 
 | # | System | Demonstrates | Status | Evidence |
 | --- | --- | --- | --- | --- |
-| 1 | [production-rag](https://github.com/pabloalvarez99/production-rag) | Hybrid RAG with RRF, optional rerank, grounded generation (citations + refusal), free-path evals and UI | **LIVE v0.1.0** | green verified `d882c9a` · [release](https://github.com/pabloalvarez99/production-rag/releases/tag/v0.1.0) · [case study](https://github.com/pabloalvarez99/production-rag/blob/main/docs/CASESTUDY.md) · [SHIP](https://github.com/pabloalvarez99/production-rag/blob/main/docs/SHIP.md) |
-| 2 | [agentic-rag-research](https://github.com/pabloalvarez99/agentic-rag-research) | Research agent with tool-based retrieval, step budgets, stop reasons, notes, and full traces | **LIVE v0.1.0** | `main` `b99c88c` · [release](https://github.com/pabloalvarez99/agentic-rag-research/releases/tag/v0.1.0) · [SHIP](https://github.com/pabloalvarez99/agentic-rag-research/blob/main/docs/SHIP.md) |
-| 3 | [multi-agent-orchestration](https://github.com/pabloalvarez99/multi-agent-orchestration) | Explicit roles, handoff budgets, degradation modes, and auditable traces | **LIVE M4** | documented boundary · `main` `2c79e9c` · [SHIP](https://github.com/pabloalvarez99/multi-agent-orchestration/blob/main/docs/SHIP.md) · no release |
-| 4 | [repomind](https://github.com/pabloalvarez99/repomind) | Repository Q&A with AST-aware chunking and grounded `path:line` citations | **LIVE M5** | documented boundary · `main` `83c4fff` · [repo](https://github.com/pabloalvarez99/repomind) · no release |
-| 5 | [ai-platform](https://github.com/pabloalvarez99/ai-platform) | Multi-service AI platform edge: authentication, rate limiting, health aggregation, and Compose delivery | **LIVE M0–M6** | `main` `3cdd3dd` · [SHIP](https://github.com/pabloalvarez99/ai-platform/blob/main/docs/SHIP.md) · no release |
+| 1 | [production-rag](https://github.com/pabloalvarez99/production-rag) | Hybrid RAG with RRF, optional rerank, grounded generation (citations + refusal), free-path evals and UI | **LIVE v0.1.0** | [release](https://github.com/pabloalvarez99/production-rag/releases/tag/v0.1.0) · green `main` `cb852ba` · [CI](https://github.com/pabloalvarez99/production-rag/actions/workflows/ci.yml) · [case study](https://github.com/pabloalvarez99/production-rag/blob/main/docs/CASESTUDY.md) · [SHIP](https://github.com/pabloalvarez99/production-rag/blob/main/docs/SHIP.md) |
+| 2 | [agentic-rag-research](https://github.com/pabloalvarez99/agentic-rag-research) | Research agent with tool-based retrieval, step budgets, stop reasons, notes, and full traces | **LIVE v0.1.0** | [release](https://github.com/pabloalvarez99/agentic-rag-research/releases/tag/v0.1.0) · green `main` `66aada2` · [CI](https://github.com/pabloalvarez99/agentic-rag-research/actions/workflows/ci.yml) · [SHIP](https://github.com/pabloalvarez99/agentic-rag-research/blob/main/docs/SHIP.md) |
+| 3 | [multi-agent-orchestration](https://github.com/pabloalvarez99/multi-agent-orchestration) | Explicit roles, handoff budgets, degradation modes, and auditable traces | **LIVE v0.1.0** | [release](https://github.com/pabloalvarez99/multi-agent-orchestration/releases/tag/v0.1.0) · green `main` `e2687ca` · [CI](https://github.com/pabloalvarez99/multi-agent-orchestration/actions/workflows/ci.yml) · [SHIP](https://github.com/pabloalvarez99/multi-agent-orchestration/blob/main/docs/SHIP.md) |
+| 4 | [repomind](https://github.com/pabloalvarez99/repomind) | Repository Q&A with AST-aware chunking and grounded `path:line` citations | **LIVE v0.1.0** | [release](https://github.com/pabloalvarez99/repomind/releases/tag/v0.1.0) · green `main` `327a949` · [CI](https://github.com/pabloalvarez99/repomind/actions/workflows/ci.yml) · [SHIP](https://github.com/pabloalvarez99/repomind/blob/main/docs/SHIP.md) |
+| 5 | [ai-platform](https://github.com/pabloalvarez99/ai-platform) | Gateway edge for the portfolio: API-key auth, per-key rate limiting, health aggregation, and Compose delivery | **LIVE v0.1.0** | [release](https://github.com/pabloalvarez99/ai-platform/releases/tag/v0.1.0) · green `main` `7978a00` · [CI](https://github.com/pabloalvarez99/ai-platform/actions/workflows/ci.yml) · [SHIP](https://github.com/pabloalvarez99/ai-platform/blob/main/docs/SHIP.md) |
 
-P3 goldens measure **routing contracts** on deterministic fake specialists, not “agents beat a single model.” RepoMind goldens measure **citation plumbing** on a fixture, not SOTA over arbitrary repos. AI Platform CI mocks upstreams and does not claim a hosted multi-service deployment. Free-path scorecards are billed **USD 0**.
+**Footnotes, because a scorecard is a contract.** P3 goldens measure **routing contracts** on deterministic fake specialists, not “agents beat a single model.” RepoMind goldens measure **citation plumbing** on a fixture, not SOTA over arbitrary repos. Free-path scorecards are billed **USD 0**.
+
+**P5 does not host the other four.** Its free path is the gateway alone: upstream URLs are empty in CI and in the documented demo, so P1–P4 answer `upstream_unconfigured` instead of running for a visitor. The rate limiter is an in-process fixed window on a single instance — not a distributed limiter — and `dev-local` is a public fixture key committed to the repo, not a credential. No hosted multi-service deployment and no TLS termination are claimed.
 
 Site map of the same ladder: **[paxdev.vercel.app](https://paxdev.vercel.app)**.
 
