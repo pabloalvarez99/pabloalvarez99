@@ -17,14 +17,14 @@ for what exists today.*
 
 | # | System | What it demonstrates | Status |
 | --- | --- | --- | --- |
-| 1 | [production-rag](https://github.com/pabloalvarez99/production-rag) | Retrieve and answer honestly: hybrid dense + sparse retrieval, RRF fusion, optional rerank, grounded citations or refusal, two-tier offline evaluation, UI | **LIVE** |
+| 1 | [production-rag](https://github.com/pabloalvarez99/production-rag) | Retrieve and answer honestly: hybrid dense + sparse retrieval, RRF fusion, optional rerank, grounded citations or refusal, two-tier offline evaluation, UI | **LIVE — v0.1.0** |
 | 2 | [agentic-rag-research](https://github.com/pabloalvarez99/agentic-rag-research) | Act with tools under budget: plan → retrieve → critique loop, step budgets, explicit stop reasons, full run traces | **IN PROGRESS** — M2 live, API/CLI next |
-| 3 | multi-agent-orchestration | Coordinate specialists: orchestrator, handoff policy, isolation, multi-agent timelines | **PLANNED** — no repository yet |
+| 3 | [multi-agent-orchestration](https://github.com/pabloalvarez99/multi-agent-orchestration) | Coordinate specialists: orchestrator, handoff policy, isolation, multi-agent timelines | **SCAFFOLD ONLY** — health endpoint; no agent loop yet |
 | 4 | repomind | Understand codebases: AST-aware chunks, `path:line` citations, fixture-backed evaluation | **PLANNED** — no repository yet |
 | 5 | ai-platform | Operate as a platform: gateway, auth, rate limits, multi-service compose, aggregate status | **PLANNED** — no repository yet |
 
-Rows 3–5 are design intent, not code. When a repository exists it will be linked here and
-nowhere else first.
+The P3 row links a public health-only scaffold, not a multi-agent implementation. Rows 4–5
+are design intent, not code.
 
 ## Try it free
 
@@ -37,6 +37,8 @@ local providers, and their CI runs with empty provider keys to prove it.
 - **[agentic-rag-research README](https://github.com/pabloalvarez99/agentic-rag-research#readme)** —
   install and run the bounded research loop in-process; the trace and the stop reason come
   back with the report.
+- **[multi-agent-orchestration README](https://github.com/pabloalvarez99/multi-agent-orchestration#readme)** —
+  install the scaffold and call `GET /health`; no model, credential, or agent loop is involved.
 
 ## 1 — production-rag (flagship)
 
@@ -83,6 +85,25 @@ retrieval pass, and adds four things:
 
 **Current state: M2 live, API/CLI next.** The loop is complete as a library and CI is green;
 `POST /v1/research` and the CLI are the next milestone and are not implemented.
+
+## 3 — multi-agent-orchestration (scaffold)
+
+[![CI](https://github.com/pabloalvarez99/multi-agent-orchestration/actions/workflows/ci.yml/badge.svg)](https://github.com/pabloalvarez99/multi-agent-orchestration/actions/workflows/ci.yml)
+
+The public repository currently proves only its package, HTTP process, `GET /health`, test,
+and credential-free CI path. Typed handoffs, budgets, specialists, timelines, and the actual
+orchestration loop are the next boundary and are not implemented.
+
+## Suggested GitHub pins
+
+Pin these repositories from the profile's **Customize your pins** control:
+
+1. [production-rag](https://github.com/pabloalvarez99/production-rag)
+2. [agentic-rag-research](https://github.com/pabloalvarez99/agentic-rag-research)
+3. [multi-agent-orchestration](https://github.com/pabloalvarez99/multi-agent-orchestration)
+4. [paxdev](https://github.com/pabloalvarez99/paxdev)
+
+Add RepoMind and AI Platform only after their public repositories contain runnable evidence.
 
 ## Engineering principles
 
