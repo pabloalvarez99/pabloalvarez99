@@ -1,13 +1,21 @@
 <p align="center">
-  <img src="assets/portfolio-vision-ai-engineering.jpg" alt="Five-system AI engineering ladder: production RAG, agentic research, multi-agent orchestration, code intelligence, and an AI platform gateway" width="920" />
+  <img src="assets/hero-wordmark.jpg" alt="Pablo Alvarez — AI Engineer, Chile. LLM systems and applied product." width="920" />
 </p>
 
-<h1 align="center">Pablo Alvarez</h1>
-<p align="center"><strong>AI Engineer · LLM Systems · Applied Product</strong></p>
 <p align="center">
-  Chile ·
-  <a href="https://paxdev.vercel.app">paxdev.vercel.app</a> ·
-  <a href="https://github.com/pabloalvarez99">github.com/pabloalvarez99</a>
+  <a href="https://paxdev.vercel.app"><img src="https://img.shields.io/badge/Portfolio-paxdev.vercel.app-7ef0d2?style=for-the-badge&labelColor=07110f" alt="Portfolio site" /></a>
+  <a href="https://pax-agentic-rag.vercel.app"><img src="https://img.shields.io/badge/Live-research%20agent-a78bfa?style=for-the-badge&labelColor=07110f" alt="Hosted research agent" /></a>
+  <a href="https://pax-repomind.vercel.app"><img src="https://img.shields.io/badge/Live-RepoMind-38bdf8?style=for-the-badge&labelColor=07110f" alt="Hosted RepoMind" /></a>
+  <a href="https://pax-ai-gateway.vercel.app"><img src="https://img.shields.io/badge/Live-AI%20gateway-fb7185?style=for-the-badge&labelColor=07110f" alt="Hosted AI gateway" /></a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/RAG-hybrid%20%2B%20RRF%20%2B%20rerank-111827" alt="RAG" />
+  <img src="https://img.shields.io/badge/Grounding-citations%20or%20refuse-111827" alt="Grounding" />
+  <img src="https://img.shields.io/badge/Agents-tools%20%2B%20budgets%20%2B%20traces-111827" alt="Agents" />
+  <img src="https://img.shields.io/badge/Evals-goldens%20%2B%20scorecards-111827" alt="Evals" />
+  <img src="https://img.shields.io/badge/Code-AST%20path%3Aline-111827" alt="Code intelligence" />
+  <img src="https://img.shields.io/badge/Product-Rust%20%2B%20Kotlin%20%2B%20Next.js-111827" alt="Product" />
 </p>
 
 <p align="center">
@@ -18,19 +26,11 @@
 </p>
 
 <p align="center">
-  <a href="https://paxdev.vercel.app"><img src="https://img.shields.io/badge/Portfolio-paxdev.vercel.app-65f6d1?style=for-the-badge&labelColor=07110f" alt="Portfolio" /></a>
-  <a href="https://github.com/pabloalvarez99/production-rag/releases/tag/v0.1.0"><img src="https://img.shields.io/badge/Flagship-production--rag%20v0.1.0-0ea5e9?style=for-the-badge&labelColor=07110f" alt="Flagship release" /></a>
-  <a href="https://github.com/pabloalvarez99/agentic-rag-research/releases/tag/v0.1.0"><img src="https://img.shields.io/badge/Agents-research%20v0.1.0-a78bfa?style=for-the-badge&labelColor=07110f" alt="Agent release" /></a>
-  <a href="https://github.com/pabloalvarez99?tab=repositories"><img src="https://img.shields.io/badge/Ladder-5%20systems%20LIVE%20v0.1.0-65f6d1?style=for-the-badge&labelColor=07110f" alt="Five systems live at v0.1.0" /></a>
+  <img src="assets/divider-filament.jpg" alt="" width="920" />
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/RAG-hybrid%20%2B%20RRF%20%2B%20rerank-111827" alt="RAG" />
-  <img src="https://img.shields.io/badge/Grounding-citations%20or%20refuse-111827" alt="Grounding" />
-  <img src="https://img.shields.io/badge/Agents-tools%20%2B%20budgets%20%2B%20traces-111827" alt="Agents" />
-  <img src="https://img.shields.io/badge/Evals-goldens%20%2B%20scorecards-111827" alt="Evals" />
-  <img src="https://img.shields.io/badge/Code-AST%20path%3Aline-111827" alt="Code intelligence" />
-  <img src="https://img.shields.io/badge/Product-Rust%20%2B%20Kotlin%20%2B%20Next.js-111827" alt="Product" />
+  <img src="assets/ladder-systems.jpg" alt="Five-system ladder: Production RAG, Agentic research, Multi-agent, RepoMind, AI platform" width="920" />
 </p>
 
 ---
@@ -53,14 +53,24 @@ A hiring manager can verify, in a browser, that I do not ship prompt demos:
 
 > Production-shaped AI systems: free-path demos, real architecture, measurable behavior, honest scope.
 
-**Start here (15 minutes, $0):** [production-rag](https://github.com/pabloalvarez99/production-rag) → ask a grounded question → ask an unanswerable one → watch it refuse. Then [agentic-rag-research](https://github.com/pabloalvarez99/agentic-rag-research) to see the loop, budget, and trace.
+**Fifteen minutes, $0, no clone required:**
+
+1. [RepoMind](https://pax-repomind.vercel.app) — ask *Where is `create_app` defined?* and read a `path:line` citation. Then ask something the fixture cannot know and watch it refuse.
+2. [Research agent](https://pax-agentic-rag.vercel.app) — run a loop, then open the trace and the budget.
+3. [AI gateway](https://pax-ai-gateway.vercel.app) — `/health` is public; `/v1/platform/status` is 401 without a key. The public fixture `X-API-Key: dev-local` returns `gateway: up` with `rag` / `research` / `mao` / `repomind` as `unconfigured` — that is the point.
+
+```bash
+curl https://pax-ai-gateway.vercel.app/health
+curl -H "X-API-Key: dev-local" https://pax-ai-gateway.vercel.app/v1/platform/status
+```
+
+**Then clone the flagship** [production-rag](https://github.com/pabloalvarez99/production-rag) if you want hybrid retrieval against Qdrant: ask a grounded question, ask an unanswerable one, watch it refuse. Script: [DEMO-DAY.md](https://github.com/pabloalvarez99/production-rag/blob/main/docs/DEMO-DAY.md).
 
 ---
 
 ## The AI systems ladder
 
-All five public systems are **LIVE at a tagged `v0.1.0`**, each on a `main` whose latest
-CI run is green, each with a documented free path. Verified against GitHub on 2026-08-14.
+All five public systems are **LIVE at a tagged `v0.1.0`**, each on a `main` whose latest CI run is green, each with a documented free path. Verified against GitHub on 2026-08-14.
 
 ```mermaid
 flowchart LR
@@ -77,44 +87,44 @@ flowchart LR
   P4 -.-> P5
 ```
 
-| # | System | Demonstrates | Status | Evidence |
+| # | System | Demonstrates | Status | Click |
 | --- | --- | --- | --- | --- |
-| 1 | [production-rag](https://github.com/pabloalvarez99/production-rag) | Hybrid RAG with RRF, optional rerank, grounded generation (citations + refusal), free-path evals and UI | **LIVE v0.1.0** | [release](https://github.com/pabloalvarez99/production-rag/releases/tag/v0.1.0) at `678c554` · green `main` `62cc15f` (metadata filters, [ADR 0011](https://github.com/pabloalvarez99/production-rag/blob/main/docs/adr/0011-metadata-filters.md)) · [CI](https://github.com/pabloalvarez99/production-rag/actions/workflows/ci.yml) · [case study](https://github.com/pabloalvarez99/production-rag/blob/main/docs/CASESTUDY.md) · [SHIP](https://github.com/pabloalvarez99/production-rag/blob/main/docs/SHIP.md) |
-| 2 | [agentic-rag-research](https://github.com/pabloalvarez99/agentic-rag-research) | Research agent with tool-based retrieval, step budgets, stop reasons, notes, and full traces | **LIVE v0.1.0** | [release](https://github.com/pabloalvarez99/agentic-rag-research/releases/tag/v0.1.0) at `18c1ff9` · green `main` `57ce423` · [CI](https://github.com/pabloalvarez99/agentic-rag-research/actions/workflows/ci.yml) · [SHIP](https://github.com/pabloalvarez99/agentic-rag-research/blob/main/docs/SHIP.md) |
-| 3 | [multi-agent-orchestration](https://github.com/pabloalvarez99/multi-agent-orchestration) | Explicit roles, handoff budgets, degradation modes, and auditable traces | **LIVE v0.1.0** | [release](https://github.com/pabloalvarez99/multi-agent-orchestration/releases/tag/v0.1.0) at `e2687ca` · green `main` `78b3910` · [CI](https://github.com/pabloalvarez99/multi-agent-orchestration/actions/workflows/ci.yml) · [SHIP](https://github.com/pabloalvarez99/multi-agent-orchestration/blob/main/docs/SHIP.md) |
-| 4 | [repomind](https://github.com/pabloalvarez99/repomind) | Repository Q&A with AST-aware chunking and grounded `path:line` citations | **LIVE v0.1.0** | [release](https://github.com/pabloalvarez99/repomind/releases/tag/v0.1.0) at `327a949` · green `main` `1db33ab` · [CI](https://github.com/pabloalvarez99/repomind/actions/workflows/ci.yml) · [SHIP](https://github.com/pabloalvarez99/repomind/blob/main/docs/SHIP.md) |
-| 5 | [ai-platform](https://github.com/pabloalvarez99/ai-platform) | Gateway edge for the portfolio: API-key auth, per-key rate limiting, health aggregation, and Compose delivery | **LIVE v0.1.0** | [release](https://github.com/pabloalvarez99/ai-platform/releases/tag/v0.1.0) at `7978a00` · **[hosted gateway](https://pax-ai-gateway.vercel.app)** from `main` `2fd74c7` · that `main` is lint-red on the two Vercel entrypoint shims, last all-green `main` `4318531` · [CI](https://github.com/pabloalvarez99/ai-platform/actions/workflows/ci.yml) · [SHIP](https://github.com/pabloalvarez99/ai-platform/blob/main/docs/SHIP.md) |
+| 1 | [production-rag](https://github.com/pabloalvarez99/production-rag) | Hybrid RAG with RRF, optional rerank, grounded generation, allowlist filters, free-path evals and UI | **LIVE v0.1.0** · clone | [release](https://github.com/pabloalvarez99/production-rag/releases/tag/v0.1.0) `678c554` · `main` `62cc15f` · [CI](https://github.com/pabloalvarez99/production-rag/actions/workflows/ci.yml) · [case study](https://github.com/pabloalvarez99/production-rag/blob/main/docs/CASESTUDY.md) |
+| 2 | [agentic-rag-research](https://github.com/pabloalvarez99/agentic-rag-research) | Research agent with tool-based retrieval, step budgets, stop reasons, notes, and full traces | **LIVE v0.1.0** · [hosted](https://pax-agentic-rag.vercel.app) | [release](https://github.com/pabloalvarez99/agentic-rag-research/releases/tag/v0.1.0) `18c1ff9` · `main` `8bde9c9` · [CI](https://github.com/pabloalvarez99/agentic-rag-research/actions/workflows/ci.yml) |
+| 3 | [multi-agent-orchestration](https://github.com/pabloalvarez99/multi-agent-orchestration) | Explicit roles, handoff budgets, degradation modes, and auditable traces | **LIVE v0.1.0** · clone | [release](https://github.com/pabloalvarez99/multi-agent-orchestration/releases/tag/v0.1.0) `e2687ca` · `main` `78b3910` · [CI](https://github.com/pabloalvarez99/multi-agent-orchestration/actions/workflows/ci.yml) |
+| 4 | [repomind](https://github.com/pabloalvarez99/repomind) | Repository Q&A with AST-aware chunking and grounded `path:line` citations | **LIVE v0.1.0** · [hosted](https://pax-repomind.vercel.app) | [release](https://github.com/pabloalvarez99/repomind/releases/tag/v0.1.0) `327a949` · `main` `0f91b7c` · [CI](https://github.com/pabloalvarez99/repomind/actions/workflows/ci.yml) |
+| 5 | [ai-platform](https://github.com/pabloalvarez99/ai-platform) | Gateway edge: API-key auth, per-key rate limiting, health aggregation, Compose and Vercel | **LIVE v0.1.0** · [hosted](https://pax-ai-gateway.vercel.app) | [release](https://github.com/pabloalvarez99/ai-platform/releases/tag/v0.1.0) `7978a00` · `main` `eba1e22` · [CI](https://github.com/pabloalvarez99/ai-platform/actions/workflows/ci.yml) |
 
-**Footnotes, because a scorecard is a contract.** P3 goldens measure **routing contracts** on deterministic fake specialists, not “agents beat a single model.” RepoMind goldens measure **citation plumbing** on a fixture, not SOTA over arbitrary repos. Free-path scorecards are billed **USD 0**.
+**Footnotes, because a scorecard is a contract.** P3 goldens measure **routing contracts** on deterministic fake specialists, not “agents beat a single model.” RepoMind goldens measure **citation plumbing** on a fixture, not SOTA over arbitrary repos. The hosted RepoMind indexes two committed snapshots and nothing else. Free-path scorecards are billed **USD 0**.
 
-**P5 does not host the other four.** Its free path is the gateway alone: upstream URLs are empty in CI and in the documented demo, so P1–P4 answer `upstream_unconfigured` instead of running for a visitor. The rate limiter is an in-process fixed window on a single instance — not a distributed limiter — and `dev-local` is a public fixture key committed to the repo, not a credential. No hosted multi-service deployment and no TLS termination are claimed.
-
-**Try hosted:** [pax-ai-gateway.vercel.app](https://pax-ai-gateway.vercel.app) — the gateway itself, running, no clone. `GET /health` is open; `GET /v1/platform/status` returns `401` without a key and answers when you pass the public fixture header `X-API-Key: dev-local`:
-
-```bash
-curl https://pax-ai-gateway.vercel.app/health
-curl -H "X-API-Key: dev-local" https://pax-ai-gateway.vercel.app/v1/platform/status
-```
-
-Verified 2026-08-14: `200`, then `401`, then `gateway: up` with `rag`, `research`, `mao`, and `repomind` reporting `unconfigured` — which is the point. One hosted gateway, not five hosted systems.
+**P5 does not host the other four.** Its free path is the gateway alone: upstream URLs are empty in CI and on Vercel, so P1–P4 answer `upstream_unconfigured` instead of running for a visitor. The rate limiter is an in-process fixed window on a single instance — not a distributed limiter — and `dev-local` is a public fixture key committed to the repo, not a credential. **P1 is not hosted:** hybrid retrieval needs local Qdrant.
 
 Site map of the same ladder: **[paxdev.vercel.app](https://paxdev.vercel.app)**.
 
-### See it without cloning
+### Evidence, not mockups
 
-Each system commits its own UI captures. These are the official ones, pinned to the commit that
-produced them — no mockup, no screenshot I cannot reproduce with a documented command. P5 is the
-only system you can also hit over HTTP; the other four still run locally.
+These captures are committed on the green `main` SHAs above. They are reproducible with documented commands.
 
-| System | Capture | What it proves |
+<p align="center">
+  <a href="https://github.com/pabloalvarez99/production-rag/blob/62cc15f/docs/assets/production-rag-demo.gif"><img src="https://raw.githubusercontent.com/pabloalvarez99/production-rag/62cc15f/docs/assets/ui-grounded.png" alt="P1 grounded answer with citations" width="300" /></a>
+  &nbsp;
+  <a href="https://pax-agentic-rag.vercel.app"><img src="https://raw.githubusercontent.com/pabloalvarez99/agentic-rag-research/8bde9c9/docs/assets/ui-done.png" alt="P2 completed research run" width="300" /></a>
+  &nbsp;
+  <a href="https://github.com/pabloalvarez99/multi-agent-orchestration/blob/78b3910/docs/assets/ui-done.png"><img src="https://raw.githubusercontent.com/pabloalvarez99/multi-agent-orchestration/78b3910/docs/assets/ui-done.png" alt="P3 multi-agent done state" width="300" /></a>
+</p>
+<p align="center">
+  <a href="https://pax-repomind.vercel.app"><img src="https://raw.githubusercontent.com/pabloalvarez99/repomind/0f91b7c/docs/assets/ui-mini-hit.png" alt="P4 path:line citation hit" width="300" /></a>
+  &nbsp;
+  <a href="https://pax-ai-gateway.vercel.app"><img src="https://raw.githubusercontent.com/pabloalvarez99/ai-platform/eba1e22/docs/assets/ui-status-unconfigured.png" alt="P5 gateway status: upstream unconfigured" width="300" /></a>
+</p>
+
+| System | More captures | What it proves |
 | --- | --- | --- |
-| P1 | [grounded answer + demo GIF](https://github.com/pabloalvarez99/production-rag/blob/129a46d/docs/assets/production-rag-demo.gif) | Citations resolve, and the same run refuses when evidence is missing |
-| P2 | [completed run](https://github.com/pabloalvarez99/agentic-rag-research/blob/57ce423/docs/assets/ui-done.png) · [budget](https://github.com/pabloalvarez99/agentic-rag-research/blob/57ce423/docs/assets/ui-budget.png) · [trace](https://github.com/pabloalvarez99/agentic-rag-research/blob/57ce423/docs/assets/ui-trace.png) | The loop stops on a typed reason, and the trace shows why |
-| P3 | [done](https://github.com/pabloalvarez99/multi-agent-orchestration/blob/78b3910/docs/assets/ui-done.png) · [budget](https://github.com/pabloalvarez99/multi-agent-orchestration/blob/78b3910/docs/assets/ui-budget.png) · [handoff trace](https://github.com/pabloalvarez99/multi-agent-orchestration/blob/78b3910/docs/assets/ui-trace.png) | Handoffs are auditable, and the budget is a state field |
-| P4 | [dogfood hit](https://github.com/pabloalvarez99/repomind/blob/a9b0acb/docs/assets/ui-dogfood-hit.png) · [mini hit](https://github.com/pabloalvarez99/repomind/blob/a9b0acb/docs/assets/ui-mini-hit.png) · [refusal](https://github.com/pabloalvarez99/repomind/blob/a9b0acb/docs/assets/ui-mini-refuse.png) | `path:line` citations on its own repository — and a refusal when the fixture has no answer |
-| P5 | [status: unconfigured](https://github.com/pabloalvarez99/ai-platform/blob/4318531/docs/assets/ui-status-unconfigured.png) | The gateway says `upstream_unconfigured` instead of faking four healthy services |
-
-Walking someone through it live: [**production-rag/docs/DEMO-DAY.md**](https://github.com/pabloalvarez99/production-rag/blob/main/docs/DEMO-DAY.md) — a 45-minute script from cold clone to refusal.
+| P1 | [demo GIF](https://github.com/pabloalvarez99/production-rag/blob/62cc15f/docs/assets/production-rag-demo.gif) · [refusal](https://github.com/pabloalvarez99/production-rag/blob/62cc15f/docs/assets/ui-refusal.png) | Citations resolve, and the same run refuses when evidence is missing |
+| P2 | [budget](https://github.com/pabloalvarez99/agentic-rag-research/blob/8bde9c9/docs/assets/ui-budget.png) · [trace](https://github.com/pabloalvarez99/agentic-rag-research/blob/8bde9c9/docs/assets/ui-trace.png) | The loop stops on a typed reason, and the trace shows why |
+| P3 | [budget](https://github.com/pabloalvarez99/multi-agent-orchestration/blob/78b3910/docs/assets/ui-budget.png) · [handoff trace](https://github.com/pabloalvarez99/multi-agent-orchestration/blob/78b3910/docs/assets/ui-trace.png) | Handoffs are auditable, and the budget is a state field |
+| P4 | [dogfood](https://github.com/pabloalvarez99/repomind/blob/0f91b7c/docs/assets/ui-dogfood-hit.png) · [refusal](https://github.com/pabloalvarez99/repomind/blob/0f91b7c/docs/assets/ui-mini-refuse.png) | `path:line` on a fixture — and a refusal when there is no answer |
+| P5 | [unconfigured](https://github.com/pabloalvarez99/ai-platform/blob/eba1e22/docs/assets/ui-status-unconfigured.png) | The gateway says `upstream_unconfigured` instead of faking four healthy services |
 
 ---
 
@@ -124,6 +134,7 @@ Walking someone through it live: [**production-rag/docs/DEMO-DAY.md**](https://g
 - Named dense + sparse vectors, BM25 weights, **RRF**, optional cross-encoder with **fail-open**
 - Citation validation against the prompt context (not a later retrieval list)
 - First-class **refusal** when evidence is missing
+- Allowlist metadata filters, fail-closed
 - Two-tier evals: retrieval (`source_hit@k`, recall, MRR, nDCG) vs answer/citation judges
 - Ablations (dense / sparse / hybrid / hybrid+rerank) and honest scorecard labels
 - Observability seams: `request_id`, timings, NullTracer default, debug allowlists
@@ -146,7 +157,7 @@ Walking someone through it live: [**production-rag/docs/DEMO-DAY.md**](https://g
 | Kotlin / Android | Native client in the same product family |
 | TypeScript / Next.js | [FarmaciaCompare](https://github.com/pabloalvarez99/FarmaciaCompare) · [Prescribo](https://github.com/pabloalvarez99/prescribo) · [paxdev](https://github.com/pabloalvarez99/paxdev) |
 | Geo / maps | [GeoAgent-App](https://github.com/pabloalvarez99/GeoAgent-App) |
-| Delivery | GitHub Actions, Docker, ADRs, SECURITY.md, release tags, empty-key CI |
+| Delivery | GitHub Actions, Docker, ADRs, SECURITY.md, release tags, empty-key CI, Vercel |
 
 ---
 
@@ -168,13 +179,13 @@ No `.env` required. Provider keys in CI are empty on purpose. Hosted OpenAI/Cohe
 
 These are the trade-offs I can walk without slides:
 
-1. Why **RRF** over a weighted sum of dense and sparse scores  
-2. Why citation markers must map to **prompt blocks**, not the raw hit list  
-3. Why **refuse > hallucinate**, and why provider failure is an error, not a refusal  
-4. Why fake providers belong in CI, and why their metrics are not quality claims  
-5. Why agent loops die by **budget**, not by “the model decided to stop”  
-6. Why only Writer may speak to the user in a multi-agent graph  
-7. Why a code-QA API takes `repo_id`, never a caller filesystem path  
+1. Why **RRF** over a weighted sum of dense and sparse scores
+2. Why citation markers must map to **prompt blocks**, not the raw hit list
+3. Why **refuse > hallucinate**, and why provider failure is an error, not a refusal
+4. Why fake providers belong in CI, and why their metrics are not quality claims
+5. Why agent loops die by **budget**, not by “the model decided to stop”
+6. Why only Writer may speak to the user in a multi-agent graph
+7. Why a code-QA API takes `repo_id`, never a caller filesystem path
 
 ---
 
@@ -192,15 +203,8 @@ These are the trade-offs I can walk without slides:
   <img src="https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white" alt="Next.js" />
   <img src="https://img.shields.io/badge/Kotlin-7F52FF?logo=kotlin&logoColor=white" alt="Kotlin" />
   <img src="https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white" alt="Docker" />
+  <img src="https://img.shields.io/badge/Vercel-000000?logo=vercel&logoColor=white" alt="Vercel" />
   <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?logo=githubactions&logoColor=white" alt="Actions" />
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Primary-Python-3776AB?labelColor=07110f" alt="Primary language: Python" />
-  <img src="https://img.shields.io/badge/Systems-Rust-000000?labelColor=07110f" alt="Systems language: Rust" />
-  <img src="https://img.shields.io/badge/Web-TypeScript-3178C6?labelColor=07110f" alt="Web language: TypeScript" />
-  <img src="https://img.shields.io/badge/Mobile-Kotlin-7F52FF?labelColor=07110f" alt="Mobile language: Kotlin" />
-  <img src="https://img.shields.io/badge/Delivery-Docker%20%2B%20Actions-2496ED?labelColor=07110f" alt="Delivery: Docker and GitHub Actions" />
 </p>
 
 <p align="center"><sub>Static badges on purpose. A generated stats card that 503s is a broken promise on the first screen a reviewer sees.</sub></p>
@@ -219,10 +223,14 @@ These are the trade-offs I can walk without slides:
 ---
 
 <p align="center">
+  <img src="assets/mark-crystal.jpg" alt="" width="72" />
+</p>
+
+<p align="center">
   <a href="https://paxdev.vercel.app">Portfolio site</a> ·
   <a href="https://github.com/pabloalvarez99/production-rag">Flagship RAG</a> ·
-  <a href="https://github.com/pabloalvarez99/agentic-rag-research">Research agent</a> ·
+  <a href="https://pax-agentic-rag.vercel.app">Research agent</a> ·
   <a href="https://github.com/pabloalvarez99/multi-agent-orchestration">Multi-agent</a> ·
-  <a href="https://github.com/pabloalvarez99/repomind">RepoMind</a> ·
-  <a href="https://github.com/pabloalvarez99/ai-platform">AI Platform</a>
+  <a href="https://pax-repomind.vercel.app">RepoMind</a> ·
+  <a href="https://pax-ai-gateway.vercel.app">AI Platform</a>
 </p>
