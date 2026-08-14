@@ -5,6 +5,9 @@ seams around them — and every one of them runs end to end without an API key.
 
 > **Production-shaped AI systems: free-path demos, real architecture, measurable behavior, honest scope.**
 
+**Portfolio:** [paxdev.vercel.app](https://paxdev.vercel.app) — a visual map of the systems,
+selected product work, and the public evidence behind each capability.
+
 ![Five-system AI engineering ladder: production RAG, agentic research, multi-agent orchestration, code intelligence, and an AI platform gateway](assets/portfolio-vision-ai-engineering.jpg)
 
 *The image is the north-star vision for the series. The table below is the source of truth
