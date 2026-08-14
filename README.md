@@ -58,7 +58,8 @@ A hiring manager can verify, in a browser, that I do not ship prompt demos:
 
 ## The AI systems ladder
 
-Four public systems are **LIVE** on the free path. The fifth is **PLANNED**.
+Five public systems are **LIVE** on documented free paths. Only P1 and P2 claim tagged
+releases; P3–P5 remain explicit about their unreleased milestone boundaries.
 
 ```mermaid
 flowchart LR
@@ -66,7 +67,7 @@ flowchart LR
   P2["P2 agentic-rag-research<br/>plan → retrieve → critique"]
   P3["P3 multi-agent-orchestration<br/>roles + budgets + traces"]
   P4["P4 repomind<br/>AST + path:line"]
-  P5["P5 ai-platform<br/>gateway · planned"]
+  P5["P5 ai-platform<br/>gateway · auth · status"]
   P1 --> P2 --> P3
   P1 -.-> P4
   P1 -.-> P5
@@ -77,13 +78,13 @@ flowchart LR
 
 | # | System | Demonstrates | Status | Evidence |
 | --- | --- | --- | --- | --- |
-| 1 | [production-rag](https://github.com/pabloalvarez99/production-rag) | Hybrid RAG with RRF, optional rerank, grounded generation (citations + refusal), free-path evals and UI | **LIVE v0.1.0** | `main` `d882c9a` · [release](https://github.com/pabloalvarez99/production-rag/releases/tag/v0.1.0) · [case study](https://github.com/pabloalvarez99/production-rag/blob/main/docs/CASESTUDY.md) · [SHIP](https://github.com/pabloalvarez99/production-rag/blob/main/docs/SHIP.md) |
-| 2 | [agentic-rag-research](https://github.com/pabloalvarez99/agentic-rag-research) | Research agent with tool-based retrieval, step budgets, stop reasons, notes, and full traces | **LIVE v0.1.0** | `main` `56b77cf` · [release](https://github.com/pabloalvarez99/agentic-rag-research/releases/tag/v0.1.0) · [SHIP](https://github.com/pabloalvarez99/agentic-rag-research/blob/main/docs/SHIP.md) |
-| 3 | [multi-agent-orchestration](https://github.com/pabloalvarez99/multi-agent-orchestration) | Explicit roles, handoff budgets, degradation modes, and auditable traces | **LIVE M4** | `main` `8b9c96b` · [repo](https://github.com/pabloalvarez99/multi-agent-orchestration) · [SHIP](https://github.com/pabloalvarez99/multi-agent-orchestration/blob/main/docs/SHIP.md) · no release |
-| 4 | [repomind](https://github.com/pabloalvarez99/repomind) | Repository Q&A with AST-aware chunking and grounded `path:line` citations | **LIVE M5** | core `46e21e3` · [repo](https://github.com/pabloalvarez99/repomind) · no release |
-| 5 | ai-platform | Multi-service AI platform edge: authentication, rate limiting, health aggregation, and Compose delivery | **PLANNED** | no public repo yet |
+| 1 | [production-rag](https://github.com/pabloalvarez99/production-rag) | Hybrid RAG with RRF, optional rerank, grounded generation (citations + refusal), free-path evals and UI | **LIVE v0.1.0** | green verified `d882c9a` · [release](https://github.com/pabloalvarez99/production-rag/releases/tag/v0.1.0) · [case study](https://github.com/pabloalvarez99/production-rag/blob/main/docs/CASESTUDY.md) · [SHIP](https://github.com/pabloalvarez99/production-rag/blob/main/docs/SHIP.md) |
+| 2 | [agentic-rag-research](https://github.com/pabloalvarez99/agentic-rag-research) | Research agent with tool-based retrieval, step budgets, stop reasons, notes, and full traces | **LIVE v0.1.0** | `main` `b99c88c` · [release](https://github.com/pabloalvarez99/agentic-rag-research/releases/tag/v0.1.0) · [SHIP](https://github.com/pabloalvarez99/agentic-rag-research/blob/main/docs/SHIP.md) |
+| 3 | [multi-agent-orchestration](https://github.com/pabloalvarez99/multi-agent-orchestration) | Explicit roles, handoff budgets, degradation modes, and auditable traces | **LIVE M4** | documented boundary · `main` `2c79e9c` · [SHIP](https://github.com/pabloalvarez99/multi-agent-orchestration/blob/main/docs/SHIP.md) · no release |
+| 4 | [repomind](https://github.com/pabloalvarez99/repomind) | Repository Q&A with AST-aware chunking and grounded `path:line` citations | **LIVE M5** | documented boundary · `main` `83c4fff` · [repo](https://github.com/pabloalvarez99/repomind) · no release |
+| 5 | [ai-platform](https://github.com/pabloalvarez99/ai-platform) | Multi-service AI platform edge: authentication, rate limiting, health aggregation, and Compose delivery | **LIVE M0–M6** | `main` `3cdd3dd` · [SHIP](https://github.com/pabloalvarez99/ai-platform/blob/main/docs/SHIP.md) · no release |
 
-P3 goldens measure **routing contracts** on deterministic fake specialists, not “agents beat a single model.” RepoMind goldens measure **citation plumbing** on a fixture, not SOTA over arbitrary repos. Free-path scorecards are billed **USD 0**.
+P3 goldens measure **routing contracts** on deterministic fake specialists, not “agents beat a single model.” RepoMind goldens measure **citation plumbing** on a fixture, not SOTA over arbitrary repos. AI Platform CI mocks upstreams and does not claim a hosted multi-service deployment. Free-path scorecards are billed **USD 0**.
 
 Site map of the same ladder: **[paxdev.vercel.app](https://paxdev.vercel.app)**.
 
@@ -128,6 +129,7 @@ git clone https://github.com/pabloalvarez99/production-rag
 git clone https://github.com/pabloalvarez99/agentic-rag-research
 git clone https://github.com/pabloalvarez99/multi-agent-orchestration
 git clone https://github.com/pabloalvarez99/repomind
+git clone https://github.com/pabloalvarez99/ai-platform
 ```
 
 No `.env` required. Provider keys in CI are empty on purpose. Hosted OpenAI/Cohere paths exist as **opt-in** extras and are not needed to review the architecture.
@@ -188,5 +190,6 @@ These are the trade-offs I can walk without slides:
   <a href="https://github.com/pabloalvarez99/production-rag">Flagship RAG</a> ·
   <a href="https://github.com/pabloalvarez99/agentic-rag-research">Research agent</a> ·
   <a href="https://github.com/pabloalvarez99/multi-agent-orchestration">Multi-agent</a> ·
-  <a href="https://github.com/pabloalvarez99/repomind">RepoMind</a>
+  <a href="https://github.com/pabloalvarez99/repomind">RepoMind</a> ·
+  <a href="https://github.com/pabloalvarez99/ai-platform">AI Platform</a>
 </p>
