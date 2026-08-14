@@ -89,7 +89,7 @@ flowchart LR
 
 | # | System | Demonstrates | Status | Click |
 | --- | --- | --- | --- | --- |
-| 1 | [production-rag](https://github.com/pabloalvarez99/production-rag) | Hybrid RAG with RRF, optional rerank, grounded generation, allowlist filters, free-path evals and UI | **LIVE v0.1.0** · clone | [release](https://github.com/pabloalvarez99/production-rag/releases/tag/v0.1.0) `678c554` · `main` `62cc15f` · [CI](https://github.com/pabloalvarez99/production-rag/actions/workflows/ci.yml) · [case study](https://github.com/pabloalvarez99/production-rag/blob/main/docs/CASESTUDY.md) |
+| 1 | [production-rag](https://github.com/pabloalvarez99/production-rag) | Hybrid RAG with RRF, optional rerank, grounded generation, an allowlisted filter control on the query UI, free-path evals | **LIVE v0.1.0** · clone | [release](https://github.com/pabloalvarez99/production-rag/releases/tag/v0.1.0) `678c554` · `main` `1cd8e4b` · [CI](https://github.com/pabloalvarez99/production-rag/actions/workflows/ci.yml) · [case study](https://github.com/pabloalvarez99/production-rag/blob/main/docs/CASESTUDY.md) |
 | 2 | [agentic-rag-research](https://github.com/pabloalvarez99/agentic-rag-research) | Research agent with tool-based retrieval, step budgets, stop reasons, notes, and full traces | **LIVE v0.1.0** · [hosted](https://pax-agentic-rag.vercel.app) | [release](https://github.com/pabloalvarez99/agentic-rag-research/releases/tag/v0.1.0) `18c1ff9` · `main` `8bde9c9` · [CI](https://github.com/pabloalvarez99/agentic-rag-research/actions/workflows/ci.yml) |
 | 3 | [multi-agent-orchestration](https://github.com/pabloalvarez99/multi-agent-orchestration) | Explicit roles, handoff budgets, degradation modes, and auditable traces | **LIVE v0.1.0** · clone | [release](https://github.com/pabloalvarez99/multi-agent-orchestration/releases/tag/v0.1.0) `e2687ca` · `main` `78b3910` · [CI](https://github.com/pabloalvarez99/multi-agent-orchestration/actions/workflows/ci.yml) |
 | 4 | [repomind](https://github.com/pabloalvarez99/repomind) | Repository Q&A with AST-aware chunking and grounded `path:line` citations | **LIVE v0.1.0** · [hosted](https://pax-repomind.vercel.app) | [release](https://github.com/pabloalvarez99/repomind/releases/tag/v0.1.0) `327a949` · `main` `0f91b7c` · [CI](https://github.com/pabloalvarez99/repomind/actions/workflows/ci.yml) |
@@ -106,7 +106,7 @@ Site map of the same ladder: **[paxdev.vercel.app](https://paxdev.vercel.app)**.
 These captures are committed on the green `main` SHAs above. They are reproducible with documented commands.
 
 <p align="center">
-  <a href="https://github.com/pabloalvarez99/production-rag/blob/62cc15f/docs/assets/production-rag-demo.gif"><img src="https://raw.githubusercontent.com/pabloalvarez99/production-rag/62cc15f/docs/assets/ui-grounded.png" alt="P1 grounded answer with citations" width="300" /></a>
+  <a href="https://github.com/pabloalvarez99/production-rag/blob/1cd8e4b/docs/assets/production-rag-demo.gif"><img src="https://raw.githubusercontent.com/pabloalvarez99/production-rag/1cd8e4b/docs/assets/ui-grounded.png" alt="P1 grounded answer with citations" width="300" /></a>
   &nbsp;
   <a href="https://pax-agentic-rag.vercel.app"><img src="https://raw.githubusercontent.com/pabloalvarez99/agentic-rag-research/8bde9c9/docs/assets/ui-done.png" alt="P2 completed research run" width="300" /></a>
   &nbsp;
@@ -120,7 +120,7 @@ These captures are committed on the green `main` SHAs above. They are reproducib
 
 | System | More captures | What it proves |
 | --- | --- | --- |
-| P1 | [demo GIF](https://github.com/pabloalvarez99/production-rag/blob/62cc15f/docs/assets/production-rag-demo.gif) · [refusal](https://github.com/pabloalvarez99/production-rag/blob/62cc15f/docs/assets/ui-refusal.png) | Citations resolve, and the same run refuses when evidence is missing |
+| P1 | [demo GIF](https://github.com/pabloalvarez99/production-rag/blob/1cd8e4b/docs/assets/production-rag-demo.gif) · [refusal](https://github.com/pabloalvarez99/production-rag/blob/1cd8e4b/docs/assets/ui-refusal.png) · [filtered](https://github.com/pabloalvarez99/production-rag/blob/1cd8e4b/docs/assets/ui-filtered.png) | Citations resolve, the same run refuses when evidence is missing, and the filter control offers only fields the API would accept |
 | P2 | [budget](https://github.com/pabloalvarez99/agentic-rag-research/blob/8bde9c9/docs/assets/ui-budget.png) · [trace](https://github.com/pabloalvarez99/agentic-rag-research/blob/8bde9c9/docs/assets/ui-trace.png) | The loop stops on a typed reason, and the trace shows why |
 | P3 | [budget](https://github.com/pabloalvarez99/multi-agent-orchestration/blob/78b3910/docs/assets/ui-budget.png) · [handoff trace](https://github.com/pabloalvarez99/multi-agent-orchestration/blob/78b3910/docs/assets/ui-trace.png) | Handoffs are auditable, and the budget is a state field |
 | P4 | [dogfood](https://github.com/pabloalvarez99/repomind/blob/0f91b7c/docs/assets/ui-dogfood-hit.png) · [refusal](https://github.com/pabloalvarez99/repomind/blob/0f91b7c/docs/assets/ui-mini-refuse.png) | `path:line` on a fixture — and a refusal when there is no answer |
