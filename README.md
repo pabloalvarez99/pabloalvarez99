@@ -20,11 +20,12 @@ for what exists today.*
 | 1 | [production-rag](https://github.com/pabloalvarez99/production-rag) | Retrieve and answer honestly: hybrid dense + sparse retrieval, RRF fusion, optional rerank, grounded citations or refusal, two-tier offline evaluation, UI | **LIVE — v0.1.0** |
 | 2 | [agentic-rag-research](https://github.com/pabloalvarez99/agentic-rag-research) | Act with tools under budget: plan → retrieve → critique loop, API/CLI, optional P1 HTTP, explicit stops, traces, offline goldens | **M5 LIVE** — release planned |
 | 3 | [multi-agent-orchestration](https://github.com/pabloalvarez99/multi-agent-orchestration) | Coordinate specialists: orchestrator, handoff policy, isolation, degraded outcomes, multi-agent timelines | **BUILDING** — M4 live; release planned |
-| 4 | repomind | Understand codebases: AST-aware chunks, `path:line` citations, fixture-backed evaluation | **PLANNED** — no repository yet |
+| 4 | [repomind](https://github.com/pabloalvarez99/repomind) | Understand codebases: safe repository walk, Python AST chunks, deterministic symbol/token index, grounded `path:line` citations | **M3 LIVE** — CLI/evals planned |
 | 5 | ai-platform | Operate as a platform: gateway, auth, rate limits, multi-service compose, aggregate status | **PLANNED** — no repository yet |
 
-The P3 row links a public health-only scaffold, not a multi-agent implementation. Rows 4–5
-are design intent, not code.
+P3's API and routing scorecard use deterministic fake specialists; RepoMind's free fixture
+proves AST/citation plumbing, not arbitrary-repository retrieval quality. P5 remains design
+intent, not code.
 
 ## Try it free
 
@@ -39,7 +40,9 @@ empty provider keys.
   install and run the bounded research loop in-process; the trace and the stop reason come
   back with the report.
 - **[multi-agent-orchestration README](https://github.com/pabloalvarez99/multi-agent-orchestration#readme)** —
-  install the scaffold and call `GET /health`; no model, credential, or agent loop is involved.
+  run the bounded fake specialist team through library, task API, or CLI and inspect its trace.
+- **[RepoMind README](https://github.com/pabloalvarez99/repomind#readme)** — index the committed
+  mini-repository and ask for a symbol definition with exact AST-derived line citations.
 
 ## 1 — production-rag (flagship)
 
@@ -107,9 +110,10 @@ Pin these repositories from the profile's **Customize your pins** control:
 1. [production-rag](https://github.com/pabloalvarez99/production-rag)
 2. [agentic-rag-research](https://github.com/pabloalvarez99/agentic-rag-research)
 3. [multi-agent-orchestration](https://github.com/pabloalvarez99/multi-agent-orchestration)
-4. [paxdev](https://github.com/pabloalvarez99/paxdev)
+4. [repomind](https://github.com/pabloalvarez99/repomind)
+5. [paxdev](https://github.com/pabloalvarez99/paxdev)
 
-Add RepoMind and AI Platform only after their public repositories contain runnable evidence.
+Add AI Platform only after its public repository contains runnable evidence.
 
 ## Engineering principles
 
