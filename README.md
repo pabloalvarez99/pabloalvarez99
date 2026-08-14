@@ -18,7 +18,7 @@ for what exists today.*
 | # | System | What it demonstrates | Status |
 | --- | --- | --- | --- |
 | 1 | [production-rag](https://github.com/pabloalvarez99/production-rag) | Retrieve and answer honestly: hybrid dense + sparse retrieval, RRF fusion, optional rerank, grounded citations or refusal, two-tier offline evaluation, UI | **LIVE — v0.1.0** |
-| 2 | [agentic-rag-research](https://github.com/pabloalvarez99/agentic-rag-research) | Act with tools under budget: plan → retrieve → critique loop, API/CLI, optional P1 HTTP, explicit stops, traces, offline goldens | **M5 LIVE** — release planned |
+| 2 | [agentic-rag-research](https://github.com/pabloalvarez99/agentic-rag-research) | Act with tools under budget: plan → retrieve → critique loop, API/CLI/UI, optional P1 HTTP, local notes tool, explicit stops, traces, offline goldens | **LIVE — v0.1.0 / M6** |
 | 3 | [multi-agent-orchestration](https://github.com/pabloalvarez99/multi-agent-orchestration) | Coordinate specialists: orchestrator, handoff policy, isolation, degraded outcomes, multi-agent timelines | **BUILDING** — M4 live; release planned |
 | 4 | [repomind](https://github.com/pabloalvarez99/repomind) | Understand codebases: safe repository walk, Python AST chunks, deterministic symbol/token index, grounded `path:line` citations | **M3 LIVE** — CLI/evals planned |
 | 5 | ai-platform | Operate as a platform: gateway, auth, rate limits, multi-service compose, aggregate status | **PLANNED** — no repository yet |
@@ -87,10 +87,11 @@ retrieval pass, and adds four things:
   loop ends. The planner, critic, and synthesiser are deterministic, so a repeated run is
   byte-identical, traces included — which is what lets a test assert on one.
 
-**Current state: M5 live; release planned.** The same loop is available as a library,
+**Current state: v0.1.0 / M6 live.** The same loop is available as a library,
 `POST /v1/research`, and a JSON CLI. An opt-in HTTP adapter consumes P1's citation passages,
 while the default remains local. A 17-case deterministic scorecard covers single-hop,
-multi-hop, unanswerable, thin-evidence, and budget-stress behavior. Those fixture results
+multi-hop, unanswerable, thin-evidence, and budget-stress behavior. The release adds an
+accessible trace UI and deterministic local `search_notes` tool. Those fixture results
 measure contract conformance, not answer quality or agent uplift.
 
 ## 3 — multi-agent-orchestration (M4 live, still building)
