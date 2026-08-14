@@ -18,8 +18,8 @@ for what exists today.*
 | # | System | What it demonstrates | Status |
 | --- | --- | --- | --- |
 | 1 | [production-rag](https://github.com/pabloalvarez99/production-rag) | Retrieve and answer honestly: hybrid dense + sparse retrieval, RRF fusion, optional rerank, grounded citations or refusal, two-tier offline evaluation, UI | **LIVE — v0.1.0** |
-| 2 | [agentic-rag-research](https://github.com/pabloalvarez99/agentic-rag-research) | Act with tools under budget: plan → retrieve → critique loop, step budgets, explicit stop reasons, full run traces | **IN PROGRESS** — M2 live, API/CLI next |
-| 3 | [multi-agent-orchestration](https://github.com/pabloalvarez99/multi-agent-orchestration) | Coordinate specialists: orchestrator, handoff policy, isolation, multi-agent timelines | **SCAFFOLD ONLY** — health endpoint; no agent loop yet |
+| 2 | [agentic-rag-research](https://github.com/pabloalvarez99/agentic-rag-research) | Act with tools under budget: plan → retrieve → critique loop, API/CLI, optional P1 HTTP, explicit stops, traces, offline goldens | **M5 LIVE** — release planned |
+| 3 | [multi-agent-orchestration](https://github.com/pabloalvarez99/multi-agent-orchestration) | Coordinate specialists: orchestrator, handoff policy, isolation, degraded outcomes, multi-agent timelines | **BUILDING** — M4 live; release planned |
 | 4 | repomind | Understand codebases: AST-aware chunks, `path:line` citations, fixture-backed evaluation | **PLANNED** — no repository yet |
 | 5 | ai-platform | Operate as a platform: gateway, auth, rate limits, multi-service compose, aggregate status | **PLANNED** — no repository yet |
 
@@ -28,8 +28,9 @@ are design intent, not code.
 
 ## Try it free
 
-No credential, no billed call, no signup. Both live repositories default to deterministic
-local providers, and their CI runs with empty provider keys to prove it.
+No credential, no billed call, no signup. P1 and P2 default to deterministic local
+providers; P3's current library path uses deterministic fake specialists. Their CI runs with
+empty provider keys.
 
 - **[production-rag README](https://github.com/pabloalvarez99/production-rag#readme)** —
   one command starts the stack and the UI; ask one question that gets a cited answer and one
@@ -83,16 +84,21 @@ retrieval pass, and adds four things:
   loop ends. The planner, critic, and synthesiser are deterministic, so a repeated run is
   byte-identical, traces included — which is what lets a test assert on one.
 
-**Current state: M2 live, API/CLI next.** The loop is complete as a library and CI is green;
-`POST /v1/research` and the CLI are the next milestone and are not implemented.
+**Current state: M5 live; release planned.** The same loop is available as a library,
+`POST /v1/research`, and a JSON CLI. An opt-in HTTP adapter consumes P1's citation passages,
+while the default remains local. A 17-case deterministic scorecard covers single-hop,
+multi-hop, unanswerable, thin-evidence, and budget-stress behavior. Those fixture results
+measure contract conformance, not answer quality or agent uplift.
 
-## 3 — multi-agent-orchestration (scaffold)
+## 3 — multi-agent-orchestration (M4 live, still building)
 
 [![CI](https://github.com/pabloalvarez99/multi-agent-orchestration/actions/workflows/ci.yml/badge.svg)](https://github.com/pabloalvarez99/multi-agent-orchestration/actions/workflows/ci.yml)
 
-The public repository currently proves only its package, HTTP process, `GET /health`, test,
-and credential-free CI path. Typed handoffs, budgets, specialists, timelines, and the actual
-orchestration loop are the next boundary and are not implemented.
+The public repository now includes deterministic Research/Critic/Writer specialists, an
+in-memory orchestrator, allowed-transition policy, global handoff and Critic-retry budgets,
+Writer-only final enforcement, explicit degraded outcomes, an ordered timeline, task API/CLI,
+and a 12-task offline routing scorecard. Optional P2 integration, remote models, and the
+release remain planned; fake results are not an answer-quality claim.
 
 ## Suggested GitHub pins
 
