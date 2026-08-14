@@ -20,7 +20,7 @@ for what exists today.*
 | 1 | [production-rag](https://github.com/pabloalvarez99/production-rag) | Retrieve and answer honestly: hybrid dense + sparse retrieval, RRF fusion, optional rerank, grounded citations or refusal, two-tier offline evaluation, UI | **LIVE — v0.1.0** |
 | 2 | [agentic-rag-research](https://github.com/pabloalvarez99/agentic-rag-research) | Act with tools under budget: plan → retrieve → critique loop, API/CLI/UI, optional P1 HTTP, local notes tool, explicit stops, traces, offline goldens | **LIVE — v0.1.0 / M6** |
 | 3 | [multi-agent-orchestration](https://github.com/pabloalvarez99/multi-agent-orchestration) | Coordinate specialists: orchestrator, handoff policy, isolation, degraded outcomes, multi-agent timelines | **BUILDING** — M4 live; release planned |
-| 4 | [repomind](https://github.com/pabloalvarez99/repomind) | Understand codebases: safe repository walk, Python AST chunks, deterministic symbol/token index, grounded `path:line` citations | **M3 LIVE** — CLI/evals planned |
+| 4 | [repomind](https://github.com/pabloalvarez99/repomind) | Understand codebases: safe repository walk, Python AST chunks, deterministic symbol/token index, grounded `path:line` citations | **M5 LIVE** — JSON CLI + 14-case fixture eval |
 | 5 | ai-platform | Operate as a platform: gateway, auth, rate limits, multi-service compose, aggregate status | **PLANNED** — no repository yet |
 
 P3's API and routing scorecard use deterministic fake specialists; RepoMind's free fixture
