@@ -79,17 +79,32 @@ flowchart LR
 
 | # | System | Demonstrates | Status | Evidence |
 | --- | --- | --- | --- | --- |
-| 1 | [production-rag](https://github.com/pabloalvarez99/production-rag) | Hybrid RAG with RRF, optional rerank, grounded generation (citations + refusal), free-path evals and UI | **LIVE v0.1.0** | [release](https://github.com/pabloalvarez99/production-rag/releases/tag/v0.1.0) · green `main` `cb852ba` · [CI](https://github.com/pabloalvarez99/production-rag/actions/workflows/ci.yml) · [case study](https://github.com/pabloalvarez99/production-rag/blob/main/docs/CASESTUDY.md) · [SHIP](https://github.com/pabloalvarez99/production-rag/blob/main/docs/SHIP.md) |
-| 2 | [agentic-rag-research](https://github.com/pabloalvarez99/agentic-rag-research) | Research agent with tool-based retrieval, step budgets, stop reasons, notes, and full traces | **LIVE v0.1.0** | [release](https://github.com/pabloalvarez99/agentic-rag-research/releases/tag/v0.1.0) · green `main` `66aada2` · [CI](https://github.com/pabloalvarez99/agentic-rag-research/actions/workflows/ci.yml) · [SHIP](https://github.com/pabloalvarez99/agentic-rag-research/blob/main/docs/SHIP.md) |
-| 3 | [multi-agent-orchestration](https://github.com/pabloalvarez99/multi-agent-orchestration) | Explicit roles, handoff budgets, degradation modes, and auditable traces | **LIVE v0.1.0** | [release](https://github.com/pabloalvarez99/multi-agent-orchestration/releases/tag/v0.1.0) · green `main` `e2687ca` · [CI](https://github.com/pabloalvarez99/multi-agent-orchestration/actions/workflows/ci.yml) · [SHIP](https://github.com/pabloalvarez99/multi-agent-orchestration/blob/main/docs/SHIP.md) |
-| 4 | [repomind](https://github.com/pabloalvarez99/repomind) | Repository Q&A with AST-aware chunking and grounded `path:line` citations | **LIVE v0.1.0** | [release](https://github.com/pabloalvarez99/repomind/releases/tag/v0.1.0) · green `main` `327a949` · [CI](https://github.com/pabloalvarez99/repomind/actions/workflows/ci.yml) · [SHIP](https://github.com/pabloalvarez99/repomind/blob/main/docs/SHIP.md) |
-| 5 | [ai-platform](https://github.com/pabloalvarez99/ai-platform) | Gateway edge for the portfolio: API-key auth, per-key rate limiting, health aggregation, and Compose delivery | **LIVE v0.1.0** | [release](https://github.com/pabloalvarez99/ai-platform/releases/tag/v0.1.0) · green `main` `7978a00` · [CI](https://github.com/pabloalvarez99/ai-platform/actions/workflows/ci.yml) · [SHIP](https://github.com/pabloalvarez99/ai-platform/blob/main/docs/SHIP.md) |
+| 1 | [production-rag](https://github.com/pabloalvarez99/production-rag) | Hybrid RAG with RRF, optional rerank, grounded generation (citations + refusal), free-path evals and UI | **LIVE v0.1.0** | [release](https://github.com/pabloalvarez99/production-rag/releases/tag/v0.1.0) · green `main` `129a46d` · [CI](https://github.com/pabloalvarez99/production-rag/actions/workflows/ci.yml) · [case study](https://github.com/pabloalvarez99/production-rag/blob/main/docs/CASESTUDY.md) · [SHIP](https://github.com/pabloalvarez99/production-rag/blob/main/docs/SHIP.md) |
+| 2 | [agentic-rag-research](https://github.com/pabloalvarez99/agentic-rag-research) | Research agent with tool-based retrieval, step budgets, stop reasons, notes, and full traces | **LIVE v0.1.0** | [release](https://github.com/pabloalvarez99/agentic-rag-research/releases/tag/v0.1.0) · green `main` `e83f03c` · [CI](https://github.com/pabloalvarez99/agentic-rag-research/actions/workflows/ci.yml) · [SHIP](https://github.com/pabloalvarez99/agentic-rag-research/blob/main/docs/SHIP.md) |
+| 3 | [multi-agent-orchestration](https://github.com/pabloalvarez99/multi-agent-orchestration) | Explicit roles, handoff budgets, degradation modes, and auditable traces | **LIVE v0.1.0** | [release](https://github.com/pabloalvarez99/multi-agent-orchestration/releases/tag/v0.1.0) at `e2687ca` · green `main` `7e94265` · [CI](https://github.com/pabloalvarez99/multi-agent-orchestration/actions/workflows/ci.yml) · [SHIP](https://github.com/pabloalvarez99/multi-agent-orchestration/blob/main/docs/SHIP.md) |
+| 4 | [repomind](https://github.com/pabloalvarez99/repomind) | Repository Q&A with AST-aware chunking and grounded `path:line` citations | **LIVE v0.1.0** | [release](https://github.com/pabloalvarez99/repomind/releases/tag/v0.1.0) at `327a949` · green `main` `eeab5ef` · [CI](https://github.com/pabloalvarez99/repomind/actions/workflows/ci.yml) · [SHIP](https://github.com/pabloalvarez99/repomind/blob/main/docs/SHIP.md) |
+| 5 | [ai-platform](https://github.com/pabloalvarez99/ai-platform) | Gateway edge for the portfolio: API-key auth, per-key rate limiting, health aggregation, and Compose delivery | **LIVE v0.1.0** | [release](https://github.com/pabloalvarez99/ai-platform/releases/tag/v0.1.0) at `7978a00` · green `main` `169e4dc` · [CI](https://github.com/pabloalvarez99/ai-platform/actions/workflows/ci.yml) · [SHIP](https://github.com/pabloalvarez99/ai-platform/blob/main/docs/SHIP.md) |
 
 **Footnotes, because a scorecard is a contract.** P3 goldens measure **routing contracts** on deterministic fake specialists, not “agents beat a single model.” RepoMind goldens measure **citation plumbing** on a fixture, not SOTA over arbitrary repos. Free-path scorecards are billed **USD 0**.
 
 **P5 does not host the other four.** Its free path is the gateway alone: upstream URLs are empty in CI and in the documented demo, so P1–P4 answer `upstream_unconfigured` instead of running for a visitor. The rate limiter is an in-process fixed window on a single instance — not a distributed limiter — and `dev-local` is a public fixture key committed to the repo, not a credential. No hosted multi-service deployment and no TLS termination are claimed.
 
 Site map of the same ladder: **[paxdev.vercel.app](https://paxdev.vercel.app)**.
+
+### See it without cloning
+
+Each system commits its own UI captures. These are the official ones, pinned to the green `main`
+above — no hosted demo, no mockup, no screenshot I cannot reproduce with a documented command.
+
+| System | Capture | What it proves |
+| --- | --- | --- |
+| P1 | [grounded answer + demo GIF](https://github.com/pabloalvarez99/production-rag/blob/129a46d/docs/assets/production-rag-demo.gif) | Citations resolve, and the same run refuses when evidence is missing |
+| P2 | [completed run](https://github.com/pabloalvarez99/agentic-rag-research/blob/e83f03c/docs/assets/ui-done.png) · [budget](https://github.com/pabloalvarez99/agentic-rag-research/blob/e83f03c/docs/assets/ui-budget.png) · [trace](https://github.com/pabloalvarez99/agentic-rag-research/blob/e83f03c/docs/assets/ui-trace.png) | The loop stops on a typed reason, and the trace shows why |
+| P3 | [done](https://github.com/pabloalvarez99/multi-agent-orchestration/blob/7e94265/docs/assets/ui-done.png) · [budget](https://github.com/pabloalvarez99/multi-agent-orchestration/blob/7e94265/docs/assets/ui-budget.png) · [handoff trace](https://github.com/pabloalvarez99/multi-agent-orchestration/blob/7e94265/docs/assets/ui-trace.png) | Handoffs are auditable, and the budget is a state field |
+| P4 | [dogfood hit](https://github.com/pabloalvarez99/repomind/blob/eeab5ef/docs/assets/ui-dogfood-hit.png) · [mini hit](https://github.com/pabloalvarez99/repomind/blob/eeab5ef/docs/assets/ui-mini-hit.png) · [refusal](https://github.com/pabloalvarez99/repomind/blob/eeab5ef/docs/assets/ui-mini-refuse.png) | `path:line` citations on its own repository — and a refusal when the fixture has no answer |
+| P5 | [status: unconfigured](https://github.com/pabloalvarez99/ai-platform/blob/169e4dc/docs/assets/ui-status-unconfigured.png) | The gateway says `upstream_unconfigured` instead of faking four healthy services |
+
+Walking someone through it live: [**production-rag/docs/DEMO-DAY.md**](https://github.com/pabloalvarez99/production-rag/blob/main/docs/DEMO-DAY.md) — a 45-minute script from cold clone to refusal.
 
 ---
 
@@ -171,9 +186,14 @@ These are the trade-offs I can walk without slides:
 </p>
 
 <p align="center">
-  <img height="160" src="https://github-readme-stats.vercel.app/api?username=pabloalvarez99&show_icons=true&hide_title=true&count_private=false&bg_color=07110f&title_color=65f6d1&text_color=f5f4e8&icon_color=65f6d1&border_color=1a2e2a&ring_color=65f6d1" alt="GitHub stats" />
-  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=pabloalvarez99&layout=compact&langs_count=8&bg_color=07110f&title_color=65f6d1&text_color=f5f4e8&border_color=1a2e2a" alt="Top languages" />
+  <img src="https://img.shields.io/badge/Primary-Python-3776AB?labelColor=07110f" alt="Primary language: Python" />
+  <img src="https://img.shields.io/badge/Systems-Rust-000000?labelColor=07110f" alt="Systems language: Rust" />
+  <img src="https://img.shields.io/badge/Web-TypeScript-3178C6?labelColor=07110f" alt="Web language: TypeScript" />
+  <img src="https://img.shields.io/badge/Mobile-Kotlin-7F52FF?labelColor=07110f" alt="Mobile language: Kotlin" />
+  <img src="https://img.shields.io/badge/Delivery-Docker%20%2B%20Actions-2496ED?labelColor=07110f" alt="Delivery: Docker and GitHub Actions" />
 </p>
+
+<p align="center"><sub>Static badges on purpose. A generated stats card that 503s is a broken promise on the first screen a reviewer sees.</sub></p>
 
 ---
 
