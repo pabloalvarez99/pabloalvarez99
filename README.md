@@ -1,11 +1,21 @@
-# Pablo Alvarez
+# Pablo Figueroa Álvarez
 
-AI Engineer · LLM systems · applied product · Chile
+AI engineer and full-stack developer · Python, TypeScript, Rust, Kotlin · Chile
 
 I build retrieval and agent systems you can run without a key.
 Answers cite evidence or refuse. Agents stop on a budget.
 
-[paxdev.vercel.app](https://paxdev.vercel.app)
+Open to freelance projects and remote roles. Portfolio: [paxdev.vercel.app](https://paxdev.vercel.app)
+
+## En español
+
+Desarrollo agentes de IA, búsqueda sobre documentos (RAG) y aplicaciones web, móviles y de escritorio. Los cinco sistemas de IA de abajo corren sin claves, con tests y CI.
+
+- Agentes y asistentes con IA que responden con fuentes o se niegan, con presupuesto de pasos y trazas.
+- Apps web con Next.js y TypeScript, y APIs con FastAPI (Python) o Axum (Rust).
+- ERP y punto de venta offline-first para pymes chilenas, con servidor Rust, escritorio Tauri y Android nativo en Kotlin ([pharma-server](https://github.com/pabloalvarez99/pharma-server)).
+
+Disponible para proyectos freelance y para empleo remoto o en Chile.
 
 ## Open now
 
@@ -50,6 +60,7 @@ Captures live in each repo under `docs/assets/`. They are evidence, not the face
 - [pharma-server](https://github.com/pabloalvarez99/pharma-server) — offline-first ERP/POS (Rust / Axum / SurrealDB)
 - [FarmaciaCompare](https://github.com/pabloalvarez99/FarmaciaCompare) · [Prescribo](https://github.com/pabloalvarez99/prescribo) — TypeScript / Next.js
 - [GeoAgent-App](https://github.com/pabloalvarez99/GeoAgent-App) — maps / geo
+- [portafolio-3d](https://github.com/pabloalvarez99/portafolio-3d) — three.js, from silicon to agents in 22 scales · [live](https://portafolio-3d-gamma.vercel.app)
 
 ## Interview me on
 
